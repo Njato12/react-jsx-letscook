@@ -5,6 +5,7 @@ import Text from '../../../general/text/Text'
 import IconGoogle from '../../../icon/IconGoogle'
 import logSing from '../../../../assets/img/logSing.png'
 import './cardLogin.scss'
+import { Link } from 'react-router-dom'
 
 type Props = {
     textLS: string

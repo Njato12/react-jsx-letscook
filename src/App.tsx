@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState,useEffect } from 'react';
 import './app.scss'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/layout/header/Header';
@@ -7,6 +7,12 @@ import Home from './pages/home/Home';
 import About from './pages/about/About';
 import Login from './pages/login/Login';
 function App() {
+  const [del,setDel] =useState<boolean>(true)
+  useEffect(()=>{
+    if(!del){
+      setDel(true)
+    }
+  },[del])
   return (
     <div className="App">
       <BrowserRouter>
@@ -14,10 +20,10 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path="/login"
-            element={<Login />} />
+            element={<Login del={del} setDel={setDel}  />} />
           <Route path='/abouts' element={<About />} />
         </Routes>
-        <Footer />
+        {del && <Footer />}
       </BrowserRouter>
     </div>
   );
