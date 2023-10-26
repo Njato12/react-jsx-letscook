@@ -1,0 +1,17 @@
+.btn_sing {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    padding: 10px 20px;
+    color: var(--primary);
+    display: inline-flex;
+    border-radius: 30px;
+    align-items: center;
+    border: none;
+}
+
+.btn--orange {
+    background-color: var(--primary);
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+}

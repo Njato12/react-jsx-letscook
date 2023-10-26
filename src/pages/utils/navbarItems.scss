@@ -1,0 +1,12 @@
+@mixin colorSize{
+    font-size: 16px;
+    color: #000;
+}
+.itemNav{
+    display: flex;
+    gap: 20px;
+    @include colorSize
+}
+.menu_footer{
+    @include colorSize
+}

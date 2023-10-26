@@ -1,0 +1,19 @@
+.search{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 20px;
+    border: 2px solid var(--primary);
+    border-radius: 30px;
+    overflow: hidden;
+}
+.input_none{
+    border: none;
+    border-radius: unset;
+    outline: unset;
+    &::placeholder {
+        color: var(--primary);
+        font-weight: 600;
+        font-size: 14px;
+    }
+}
