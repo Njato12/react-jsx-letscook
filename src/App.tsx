@@ -3,22 +3,18 @@ import './app.scss'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/layout/header/Header';
 import Footer from './components/layout/footer/Footer';
-import Home from './pages/home/Home';
 import About from './pages/about/About';
 import Login from './pages/login/Login';
+import Home from './pages/home/Home';
 function App() {
   const [del,setDel] =useState<boolean>(true)
-  useEffect(()=>{
-    if(!del){
-      setDel(true)
-    }
-  },[del])
+  
   return (
     <div className="App">
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Home del={del} setDel={setDel} />} />
           <Route path="/login"
             element={<Login del={del} setDel={setDel}  />} />
           <Route path='/abouts' element={<About />} />

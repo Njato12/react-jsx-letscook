@@ -3,7 +3,7 @@ import './button.scss'
 type Props={
     className:string,
     text:string,
-    onClick?:any
+    onClick?:React.MouseEventHandler<HTMLButtonElement>
 }
 const Button = ({className,text,onClick}: Props) => {
   return (

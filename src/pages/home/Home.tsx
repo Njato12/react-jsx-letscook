@@ -1,8 +1,16 @@
 import React from 'react'
+import { useEffect } from 'react'
+type Props = {
+  del:boolean,
+  setDel:React.Dispatch<React.SetStateAction<boolean>>
+}
 
-type Props = {}
-
-const Home = (props: Props) => {
+const Home = ({del,setDel}: Props) => {
+  useEffect(()=>{
+    if(!del){
+      setDel(true)
+    }
+  },[del])
   return (
     <div>Home</div>
   )
