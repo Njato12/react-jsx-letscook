@@ -51,7 +51,7 @@ const Header = (props: Props) => {
         <Link to='/login' >
           <Button className="btn_sing btn--orange " text="Login" />
         </Link>
-        <Link to='/'>
+        <Link to='/singUp'>
           <Button className="btn_sing" text="Sing Up" />
         </Link>
       </div>

@@ -33,7 +33,7 @@ const CardLogin = ({ textLS }: Props) => {
                     <Button className="btn_sing btn--orange " text="Login" />
                     <div className="account">
                         <Text tag='p' text='Dont have an account? ' className='forget' />
-                        <Text tag='p' text='Sign up ' className='forget green' />
+                        <Link to='/singUp'> <Text tag='p' text='Sign up ' className='forget green' /></Link>
                     </div>
                 </div>
             </div>
