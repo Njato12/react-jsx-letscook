@@ -27,13 +27,13 @@ const CardSingUp = ({ textLS }: Props) => {
                     "Content-Type": "application/json"
                 },
             })
+            console.log(data);
+            localStorage.setItem('token', data.data.data.token)
         }
         catch (error: any) {
             console.error(`${error.message}`);
         }
 
-        //  console.log(data);
-        // localStorage.setItem('token', data.data.token)
 
     }
     return (
@@ -51,8 +51,7 @@ const CardSingUp = ({ textLS }: Props) => {
                     </div>
                     <div className='input-sing'>
                         <TextField onChange={handleChange} label="user Name" variant="standard" name='username' type='text' />
-                    </div>
-                    <div className='input-log'>
+                    
                         <TextField onChange={handleChange} label="E-mail" variant="standard" name='email' type='email' />
                         <TextField onChange={handleChange} label="Password" variant="standard" name='password' type='password' />
                     </div>

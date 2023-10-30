@@ -1,10 +1,12 @@
-.container_singUp{
+.container_singUp {
     padding: 100px;
 }
-.card_singUp{
+
+.card_singUp {
     display: flex;
     justify-content: center;
 }
+
 .wrap_textSingUp {
     padding: 10px;
     display: flex;
@@ -18,4 +20,12 @@
     flex-shrink: 0;
     background: rgba(242, 242, 242, 0.80);
     border-radius: 0 10px 10px 0;
+}
+
+.input-sing {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
 }
