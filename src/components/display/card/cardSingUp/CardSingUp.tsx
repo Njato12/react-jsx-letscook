@@ -1,4 +1,4 @@
-import React, { ReactEventHandler, useState } from 'react'
+import React, { useState } from 'react'
 import { TextField } from '@mui/material'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
@@ -28,7 +28,7 @@ const CardSingUp = ({ textLS }: Props) => {
                 },
             })
             console.log(data);
-            localStorage.setItem('token', data.data.data.token)
+            localStorage.setItem('token', data.data.token)
         }
         catch (error: any) {
             console.error(`${error.message}`);
@@ -51,7 +51,7 @@ const CardSingUp = ({ textLS }: Props) => {
                     </div>
                     <div className='input-sing'>
                         <TextField onChange={handleChange} label="user Name" variant="standard" name='username' type='text' />
-                    
+
                         <TextField onChange={handleChange} label="E-mail" variant="standard" name='email' type='email' />
                         <TextField onChange={handleChange} label="Password" variant="standard" name='password' type='password' />
                     </div>
